@@ -2,6 +2,7 @@ package state.States;
 
 import phone.Phone;
 import state.State;
+import state.States.*;
 
 public class BlockedState extends State {
 
@@ -16,7 +17,7 @@ public class BlockedState extends State {
     @Override
     public String clickAnswer() {
         phone.changeState(new CallingState(phone));
-        return "BlockState ->" + this.getClass().getName() + "-> CallingState";
+        return this.getClass().getName() + " -> clickAnswer" +  " -> CallingState";
     }
 
     /**
@@ -29,7 +30,7 @@ public class BlockedState extends State {
     public String clickEnd() {
         if (phone.getBalance() > 0) {
             phone.changeState(new WaitingState(phone));
-            return "BlockState -> " + this.getClass().getName() + " -> WaitingState";
+            return this.getClass().getName() + " -> clickEnd" +  " -> WaitingState";
         }
         return null;
     }
@@ -44,7 +45,7 @@ public class BlockedState extends State {
     public String call() {
         if (phone.getBalance() > 0) {
             phone.changeState(new CallingState(phone));
-            return "BlockState -> " + this.getClass().getName() + " -> WaitingState";
+            return this.getClass().getName() + " -> call" +  " -> CallingState";
         }
         return null;
     }

@@ -30,12 +30,10 @@ public class WaitingState extends State {
         if (phone.getBalance() > 0) {
             phone.changeState(new CallingState(phone));
             return this.getClass().getName() + " -> call" + " -> CallingState";
-        }
-        else {
+        } else {
             phone.changeState(new BlockedState(phone));
             return this.getClass().getName() + " -> call" + " -> BlockedState";
         }
-        return null;
     }
 
     /**

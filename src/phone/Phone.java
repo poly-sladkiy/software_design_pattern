@@ -1,6 +1,7 @@
 package phone;
 
-import state.*;
+import state.State;
+import state.States.*;
 
 public class Phone {
     private State state;

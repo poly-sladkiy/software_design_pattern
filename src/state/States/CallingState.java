@@ -1,10 +1,11 @@
 package state.States;
 
 import state.State;
+import state.State;
 import phone.Phone;
 
 
-public class CallingState {
+public class CallingState extends State {
     public CallingState(Phone phone) {
         super(phone);
     }
@@ -14,7 +15,7 @@ public class CallingState {
      * @return null
      */
     @Override
-    public String clickAnswer) {
+    public String clickAnswer() {
         return null;
     }
 
@@ -23,7 +24,7 @@ public class CallingState {
      * @return null
      */
     @Override
-    public String call) {
+    public String call() {
         return null;
     }
 
@@ -34,7 +35,7 @@ public class CallingState {
     @Override
     public String clickEnd() {
         phone.changeState(new WaitingState(phone));
-        return this.getClass().getName() + " -> CallingState" + " -> WaitingState";
+        return this.getClass().getName() + " -> clickEnd" + " -> WaitingState";
     }
 
 }
