@@ -9,6 +9,12 @@ public class TalkingState extends State {
         super(phone);
     }
 
+    //todo: прописать комментарии
+    @Override
+    public boolean callable() {
+        return false;
+    }
+
     /**
      * Из состояния разговора нельзя ответить на ещё один звонок
      * @return String

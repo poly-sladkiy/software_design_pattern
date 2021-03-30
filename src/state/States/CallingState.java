@@ -10,6 +10,12 @@ public class CallingState extends State {
         super(phone);
     }
 
+    //todo: прописать комментарии
+    @Override
+    public boolean callable() {
+        return false;
+    }
+
     /**
      * В режиме разговора мы не можем ответить на звонок
      * @return null

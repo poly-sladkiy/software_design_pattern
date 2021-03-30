@@ -9,6 +9,8 @@ public abstract class State {
         this.phone = phone;
     }
 
+    public abstract boolean callable();
+
     public abstract String clickAnswer();
     public abstract String clickEnd();
     public abstract String call();

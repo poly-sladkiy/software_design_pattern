@@ -10,6 +10,15 @@ public class BlockedState extends State {
         super(phone);
     }
 
+    //todo: прописать комментарии
+    @Override
+    public boolean callable() {
+        if (phone.getBalance() > 0) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Мы можем принять звонок от другого человека с отрицательным балансом
      * @return String

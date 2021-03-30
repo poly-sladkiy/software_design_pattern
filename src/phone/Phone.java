@@ -33,6 +33,10 @@ public class Phone {
     }
 
     public String call (String num) {
-        return this.state.call();
+        if (state.callable()) {
+            balance -= 0.5;
+            return this.state.call();
+        }
+        return null;
     }
 }

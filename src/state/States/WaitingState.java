@@ -9,6 +9,15 @@ public class WaitingState extends State {
         super(phone);
     }
 
+    //todo: прописать комментарии
+    @Override
+    public boolean callable() {
+        if (phone.getBalance() > 0) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Мы можем ответить на входящий звонок в режиме ожидания
      * @return String
