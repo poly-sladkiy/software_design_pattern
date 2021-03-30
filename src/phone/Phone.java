@@ -15,7 +15,7 @@ public class Phone {
         return balance;
     }
 
-    public void chanheState (State state) {
+    public void changeState (State state) {
         this.state = state;
     }
 
@@ -34,4 +34,5 @@ public class Phone {
     public void call (String num) {
         this.state.call();
     }
+
 }

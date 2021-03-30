@@ -3,7 +3,7 @@ package state;
 import phone.Phone;
 
 public abstract class State {
-    private Phone phone;
+    public Phone phone;
 
     public State(Phone phone) {
         this.phone = phone;
