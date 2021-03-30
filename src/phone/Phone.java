@@ -24,16 +24,15 @@ public class Phone {
         this.balance += money;
     }
 
-    public void clickAnswer () {
-        this.state.clickAnswer();
+    public String clickAnswer () {
+        return this.state.clickAnswer();
     }
 
-    public void clickEnd () {
-        this.state.clickEnd();
+    public String clickEnd () {
+        return this.state.clickEnd();
     }
 
-    public void call (String num) {
-        this.state.call();
+    public String call (String num) {
+        return this.state.call();
     }
-
 }
