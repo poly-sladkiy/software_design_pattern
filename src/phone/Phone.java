@@ -20,8 +20,13 @@ public class Phone {
         this.state = state;
     }
 
-    public void addMoney (float money) {
-        this.balance += money;
+    public boolean addMoney (float money) {
+        if (money > 0) {
+            this.balance += money;
+            return true;
+        }
+        else
+            return false;
     }
 
     public String clickAnswer () {
