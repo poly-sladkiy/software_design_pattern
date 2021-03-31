@@ -1,85 +1,61 @@
 import phone.Phone;
+
+import java.time.Instant;
 import java.util.Scanner;
 
 
 public class main {
     public static void main(String[] args) {
         Phone phone = new Phone();
-
-        phone.addMoney(0.6f);
-        /*System.out.println(phone.getBalance());
-        System.out.println(phone.call("88005553535"));*/
         Scanner sc = new Scanner(System.in);
+        String command;
+        String state;
 
-        UserCommands command = UserCommands.TurnOn;
-        int j = 1, commandIndex;
-        String telephoneNumber;
-        float deposit = 0;
+        String help =
+                "help\t\t\t\tshow this text\n" +
+                "addMoney <float>\tadd money to the phone`s balance\n" +
+                "showBalance\t\t\tshow your phone`s balance\n" +
+                "answerCall\t\t\tanswer to incoming call\n" +
+                "call <number>\t\tcall to number (only if balance more then 0.5)\n" +
+                "endCall\t\t\t\tend talking\n" +
+                "turnOff\t\t\t\tturn off your phone";
 
-        //Пользовательский интерфейс
         System.out.print("Phone is turned on! Welcome!\n");
-        /* while (command != UserCommands.TurnOff)
-        {
-            System.out.print("--------------------\n");
-            System.out.print("What do you want?\n" +
-                    "1 - See your order\n" +
-                    "2 - Change your order\n" +
-                    "0 or any other number - Exit\n");
-            System.out.print("--------------------\n");
 
-            commandIndex = sc.nextInt();
-            command = UserCommands.values()[commandIndex];
+        while (true) {
+            command = sc.next();
+            state = "";
 
+            switch (command) {
 
-            switch (command)
-            {
-                case (FindOutBalance):
-                    System.out.print("--------------------\n");
-                    System.out.println("Your balance: " + phone.getBalance());
-                    System.out.print("--------------------\n");
+                case "turnOff":
+                    System.out.println("Turning off... Good bye!");
+                    return;
 
-                    break;
-
-
-                case (PutMoneyOnBalance):
-                    System.out.print("--------------------\n");
-                    System.out.print("How much do you want to deposit?" );
-                    deposit = sc.nextFloat();
-                    if (deposit <= 0) {
-                        System.out.print("The value cannot be less than or equal zero!\n");
+                case "answerCall":
+                    state = phone.clickAnswer();
+                    if (state == null) {
+                        System.out.println("Can not answer!");
+                    } else {
+                        System.out.println("Answer...");
+                        phone.clickAnswer();
                     }
-                    else {
-                        phone.addMoney(deposit);
+                    break;
+
+                case "endCall":
+                    state = phone.clickEnd();
+                    if (state == null) {
+                        System.out.println("Can not end call!");
+                    } else {
+                        Instant finish = Instant.now();
+                        System.out.println("Call is end.");
                     }
-                    System.out.print("--------------------\n");
-
                     break;
 
-                case (CallSmb):
-                    System.out.print("--------------------\n");
-                    System.out.print("What number do you want to call?" );
-                    telephoneNumber = sc.nextLine();
-                    phone.call(telephoneNumber);
-                    //start time
-                    System.out.println("Calling on number: \n" + telephoneNumber);
-                    System.out.print("--------------------\n");
-
-                    break;
-
-                case (ResetCall):
-                    System.out.print("--------------------\n");
-                    System.out.print("The call was cancelled" );
-                    //stop time
-                    phone.clickEnd();
-                    System.out.print("--------------------\n");
-
-                    break;
-
-                default:
-
+                case "help":
+                    System.out.println(help);
                     break;
             }
-        } */
-
+        }
     }
 }
