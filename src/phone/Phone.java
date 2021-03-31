@@ -29,6 +29,12 @@ public class Phone {
             return false;
     }
 
+    public void payMoney (long time) {                              //Сама функция списания денег
+        balance -= 0.03f * time;
+        return;
+    }
+
+
     public String clickAnswer () {
         return this.state.clickAnswer();
     }
@@ -39,7 +45,6 @@ public class Phone {
 
     public String call (String num) {
         if (state.callable()) {
-            balance -= 0.5;
             return this.state.call();
         }
         return null;

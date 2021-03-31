@@ -1,6 +1,7 @@
 import phone.Phone;
 
 import java.time.Instant;
+import java.time.Duration;
 import java.util.Scanner;
 
 public class main {
@@ -21,7 +22,9 @@ public class main {
 
         String telephoneNumber;
         float deposit = 0;
-        Instant start, finish;
+        Instant start = Instant.now();
+        Instant finish = Instant.now();
+        boolean didYouCall = false;                 //Флажок для реализации логики списания денег
 
         System.out.println(help);
         System.out.println("Phone is turn on!");
@@ -58,6 +61,7 @@ public class main {
                 case "call":
                     telephoneNumber = sc.next();
                     state = phone.call(telephoneNumber);
+                    didYouCall = true;
 
                     if (state == null){
                         System.out.println("Can not call!");
@@ -70,11 +74,13 @@ public class main {
 
                 case "answerCall":
                     state = phone.clickAnswer();
+                    didYouCall = false;
                     if (state == null) {
                         System.out.println("Can not answer!");
                     } else {
                         System.out.println("Answer...");
                         phone.clickAnswer();
+                        start = Instant.now();
 //                        System.out.println(state);
                     }
                     break;
@@ -85,6 +91,10 @@ public class main {
                         System.out.println("Can not end call!");
                     } else {
                         finish = Instant.now();
+                        long elapsed = (Duration.between(start, finish).toMillis())/1000;
+                        System.out.println("Your phone conversation lasted: " + elapsed + " seconds");
+                        if (didYouCall)                                            //Если звонил ты, то деньги списались
+                            phone.payMoney(elapsed);
                         System.out.println("Call is end.");
 //                        System.out.println(state);
                     }
