@@ -68,7 +68,7 @@ public class main {
                     } else {
                         start = Instant.now();
                         System.out.println("Calling on number: " + telephoneNumber);
-//                        System.out.println(state);
+                        System.out.println(state);
                     }
                     break;
 
@@ -91,10 +91,13 @@ public class main {
                         System.out.println("Can not end call!");
                     } else {
                         finish = Instant.now();
-                        long elapsed = (Duration.between(start, finish).toMillis())/1000;
+
+                        long elapsed = (Duration.between(start, finish).toMillis()) / 1000;
                         System.out.println("Your phone conversation lasted: " + elapsed + " seconds");
+
                         if (didYouCall)                                            //Если звонил ты, то деньги списались
                             phone.payMoney(elapsed);
+
                         System.out.println("Call is end.");
 //                        System.out.println(state);
                     }
