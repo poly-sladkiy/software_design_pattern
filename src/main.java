@@ -11,20 +11,25 @@ public class main {
         String state;
 
         String help =
-                "help\t\t\t\tshow this text\n" +
+                "\nhelp\t\t\t\tshow this text\n" +
                 "addMoney <float>\tadd money to the phone`s balance\n" +
                 "showBalance\t\t\tshow your phone`s balance\n" +
                 "answerCall\t\t\tanswer to incoming call\n" +
                 "call <number>\t\tcall to number (only if balance more then 0.5)\n" +
                 "endCall\t\t\t\tend talking\n" +
-                "turnOff\t\t\t\tturn off your phone";
+                "turnOff\t\t\t\tturn off your phone\n";
 
         String telephoneNumber;
         float deposit = 0;
         Instant start, finish;
 
+        System.out.println(help);
+        System.out.println("Phone is turn on!");
+
         while (true)
         {
+            System.out.print("Enter command: ");
+
             command = sc.next();
             state = "";
 
@@ -45,18 +50,22 @@ public class main {
                         System.out.print("The balance is replenished!\n");
                     }
                     else {
-                        System.out.print("Something went wrong!" +
+                        System.out.print("Something went wrong! " +
                                 "May be you entered a negative amount or a zero?\n");
                     }
-
                     break;
 
                 case "call":
                     telephoneNumber = sc.next();
-                    phone.call(telephoneNumber);
-                    start = Instant.now();
-                    System.out.println("Calling on number:" + telephoneNumber);
+                    state = phone.call(telephoneNumber);
 
+                    if (state == null){
+                        System.out.println("Can not call!");
+                    } else {
+                        start = Instant.now();
+                        System.out.println("Calling on number: " + telephoneNumber);
+//                        System.out.println(state);
+                    }
                     break;
 
                 case "answerCall":
@@ -66,6 +75,7 @@ public class main {
                     } else {
                         System.out.println("Answer...");
                         phone.clickAnswer();
+//                        System.out.println(state);
                     }
                     break;
 
@@ -76,6 +86,7 @@ public class main {
                     } else {
                         finish = Instant.now();
                         System.out.println("Call is end.");
+//                        System.out.println(state);
                     }
                     break;
 
@@ -84,8 +95,8 @@ public class main {
                     break;
 
                 default:
-                    System.out.print("You entered the wrong command" +
-                            "Enter" + '"' + "help" + '"' + "to get information about the program.");
+                    System.out.println("You entered the wrong command\n" +
+                            "Enter 'help' to get information about the program.");
                     break;
 
             }
