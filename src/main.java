@@ -4,8 +4,9 @@ public class main {
     public static void main(String[] args) {
         Phone phone = new Phone();
 
-        phone.addMoney(1);
+        phone.addMoney(0.6f);
         System.out.println(phone.getBalance());
-        System.out.println(phone.call("085093450"));
+        System.out.println(phone.call("88005553535"));
+
     }
 }

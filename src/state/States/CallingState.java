@@ -1,7 +1,6 @@
 package state.States;
 
 import state.State;
-import state.State;
 import phone.Phone;
 
 
@@ -10,7 +9,13 @@ public class CallingState extends State {
         super(phone);
     }
 
-    //todo: прописать комментарии
+    /**
+     * Добавлено для удобства работы совершения звонков
+     * Чтобы не обращаться к названию состояния и балансу, используем метод callable
+     * Он проверяет возможность совершить звонок в данном состоянии телефона
+     * Во время вызова мы не можем позвонить ещё раз
+     * @return boolean
+     */
     @Override
     public boolean callable() {
         return false;

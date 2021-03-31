@@ -6,13 +6,13 @@ import state.States.*;
 public class Phone {
     private State state;
     private String number;
-    private int balance;
+    private float balance;
 
     public Phone () {
         this.state = new WaitingState(this);
     }
 
-    public int getBalance() {
+    public float getBalance() {
         return balance;
     }
 
@@ -20,7 +20,7 @@ public class Phone {
         this.state = state;
     }
 
-    public void addMoney (int money) {
+    public void addMoney (float money) {
         this.balance += money;
     }
 
