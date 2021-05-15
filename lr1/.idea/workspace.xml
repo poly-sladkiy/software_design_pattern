@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aed3d5fd-d9f4-450d-adc4-72533d86bef9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="b50328995d613d65bcb5b9146ac14eab6b2bad04" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1qTHRW0BYsgU222AKtlTNZ28mCO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="software_design_pattern" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aed3d5fd-d9f4-450d-adc4-72533d86bef9" name="Default Changelist" comment="" />
+      <created>1617096654312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617096654312</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Сделал классы Phone и Stage. В пакете state.states будут содаваться новые состояния телефона. В телефоне нужно проверить все ли методы созданы в соответствии с uml диаграммой. Клиентского кода пока нет - запускать нечего. Основная задача: создать конкретные состояния от абстрактоно класа State;">
+      <created>1617099674001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617099674001</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Файлы IDEA">
+      <created>1617100269857</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617100269857</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Реализован класс BlockedState, исправлены орфографические ошибки с ошибками синтаксиса.">
+      <created>1617106558524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617106558524</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Реализован класс TalkingState.">
+      <created>1617107333751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617107333751</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Edit README.md">
+      <created>1617108461386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617108461386</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Исправлена ошибка, из-за которой классы не видели друг друга.">
+      <created>1617108549666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617108549666</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Исправлен класс телефона и создан клиентский код.">
+      <created>1617109822180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617109822180</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Реализована логика уменьшения денег на балансе.">
+      <created>1617111317043</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617111317043</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Реализована часть консольных комманд">
+      <created>1617207803125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617207803125</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Косметические изменения">
+      <created>1617211923965</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617211923965</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Косметический коммит">
+      <created>1617222223679</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617222223679</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="consoleApp" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Сделал классы Phone и Stage. В пакете state.states будут содаваться новые состояния телефона. В телефоне нужно проверить все ли методы созданы в соответствии с uml диаграммой. Клиентского кода пока нет - запускать нечего. Основная задача: создать конкретные состояния от абстрактоно класа State;" />
+    <MESSAGE value="Файлы IDEA" />
+    <MESSAGE value="Реализован класс BlockedState, исправлены орфографические ошибки с ошибками синтаксиса." />
+    <MESSAGE value="Реализован класс TalkingState." />
+    <MESSAGE value="Edit README.md" />
+    <MESSAGE value="Исправлена ошибка, из-за которой классы не видели друг друга." />
+    <MESSAGE value="Исправлен класс телефона и создан клиентский код." />
+    <MESSAGE value="Реализована логика уменьшения денег на балансе." />
+    <MESSAGE value="Реализована часть консольных комманд" />
+    <MESSAGE value="Выполнен мерж веток, выполнен консольный интефейс" />
+    <MESSAGE value="Косметические изменения" />
+    <MESSAGE value="Косметический коммит" />
+    <option name="LAST_COMMIT_MESSAGE" value="Косметический коммит" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+Index: src/main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import phone.Phone;\r\n\r\nimport java.time.Instant;\r\nimport java.util.Scanner;\r\n\r\npublic class main {\r\n    public static void main(String[] args) {\r\n        Phone phone = new Phone();\r\n        Scanner sc = new Scanner(System.in);\r\n\r\n        String command, telephoneNumber;\r\n        float deposit = 0;\r\n        Instant start, finish;\r\n\r\n        while (true)\r\n        {\r\n            command = sc.next();\r\n\r\n            switch (command)\r\n            {\r\n                case (\"showBalance\"):\r\n                    System.out.println(\"Your balance: \" + phone.getBalance());\r\n\r\n                    break;\r\n\r\n\r\n                case (\"addMoney\"):\r\n                    deposit = sc.nextFloat();\r\n\r\n                    if (phone.addMoney(deposit);) {\r\n                        System.out.print(\"The balance is replenished!\\n\");\r\n                    }\r\n                    else {\r\n                        System.out.print(\"Something went wrong!\" +\r\n                                \"May be you entered a negative amount or a zero?\\n\");\r\n                    }\r\n\r\n                    break;\r\n\r\n                case (\"call\"):\r\n                    telephoneNumber = sc.next();\r\n                    phone.call(telephoneNumber);\r\n                    start = Instant.now();\r\n                    System.out.println(\"Calling on number:\" + telephoneNumber);\r\n\r\n                    break;\r\n\r\n\r\n                default:\r\n                    System.out.print(\"You entered the wrong command\" +\r\n                            \"Enter\" + '\"' + \"help\" + '\"' + \"to get information about the program.\");\r\n                    break;\r\n            }\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main.java b/src/main.java
+--- a/src/main.java	
++++ b/src/main.java	
+@@ -27,7 +27,7 @@
+                 case ("addMoney"):
+                     deposit = sc.nextFloat();
+ 
+-                    if (phone.addMoney(deposit);) {
++                    if (phone.addMoney(deposit)) {
+                         System.out.print("The balance is replenished!\n");
+                     }
+                     else {
