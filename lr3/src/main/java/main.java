@@ -1,15 +1,16 @@
 package main.java;
 
 import phone.Phone;
-
+import sound.Ringtone;
 import java.time.Instant;
 import java.time.Duration;
 import java.util.Scanner;
 
 public class main {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
+        Thread T;
+        T = new Thread(new Ringtone());
         Phone phone = new Phone();
         Scanner sc = new Scanner(System.in);
         String command;
@@ -73,6 +74,8 @@ public class main {
                     break;
 
                 case "answerCall":
+
+                    T.start();
                     state = phone.clickAnswer();
                     didYouCall = false;
                     if (state == null) {
@@ -86,6 +89,7 @@ public class main {
                     break;
 
                 case "endCall":
+                    T.interrupt();
                     state = phone.clickEnd();
                     if (state == null) {
                         System.out.println("Can not end call!");
