@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args) throws InterruptedException {
-        Thread T;
-        T = new Thread(new Ringtone());
+        Thread T = null;
         Phone phone = new Phone();
         Scanner sc = new Scanner(System.in);
+
         String command;
         String state;
 
@@ -60,6 +60,7 @@ public class main {
                     break;
 
                 case "call":
+
                     telephoneNumber = sc.next();
                     state = phone.call(telephoneNumber);
                     didYouCall = true;
@@ -67,6 +68,9 @@ public class main {
                     if (state == null) {
                         System.out.println("Can not call!");
                     } else {
+                        T = new Thread(new Ringtone());
+                        T.start();
+
                         start = Instant.now();
                         System.out.println("Calling on number: " + telephoneNumber);
                         System.out.println(state);
@@ -75,12 +79,15 @@ public class main {
 
                 case "answerCall":
 
-                    T.start();
                     state = phone.clickAnswer();
                     didYouCall = false;
+
                     if (state == null) {
                         System.out.println("Can not answer!");
                     } else {
+                        T = new Thread(new Ringtone());
+                        T.start();
+
                         System.out.println("Answer...");
                         phone.clickAnswer();
                         start = Instant.now();
@@ -89,7 +96,10 @@ public class main {
                     break;
 
                 case "endCall":
+
+                    assert T != null;
                     T.interrupt();
+
                     state = phone.clickEnd();
                     if (state == null) {
                         System.out.println("Can not end call!");

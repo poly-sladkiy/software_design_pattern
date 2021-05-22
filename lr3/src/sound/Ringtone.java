@@ -13,13 +13,6 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Ringtone implements Runnable {
 
-
-    /*@Override
-    public void run() {
-
-        Sound.playSound("D:/Sounds/calling.wav").join();
-    }*/
-
     public static class Sound implements AutoCloseable {
         private boolean released = false;
         private AudioInputStream stream = null;
@@ -155,8 +148,11 @@ public class Ringtone implements Runnable {
 
     @Override
     public void run() {
+        /// Change this path to music
+        String path = "G:\\courses\\Study\\software_design_pattern\\lr3\\src\\calling.wav";
+
         Sound snd;
-        snd = Sound.playSound("D:/Sounds/calling.wav");
+        snd = Sound.playSound(path);
         while (true) {
             // Проверяем, был ли получен сигнал на прерывание потока, если да, то выходим
             // из цикла и завершаем работу потока
