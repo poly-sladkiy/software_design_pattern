@@ -1,8 +1,8 @@
 package com.phone;
 
-import org.springframework.stereotype.Component;
 import com.state.State;
-import com.state.States.*;
+import com.state.States.WaitingState;
+import org.springframework.stereotype.Component;
 
 @Component
 public class Phone {

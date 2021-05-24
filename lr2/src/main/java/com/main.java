@@ -1,10 +1,10 @@
 package com;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.phone.Phone;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
-
-import com.phone.Phone;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -17,7 +17,7 @@ public class main {
 
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com");
 
         Phone phone = context.getBean(Phone.class);
 
@@ -85,6 +85,7 @@ public class main {
                 case "answerCall":
                     state = phone.clickAnswer();
                     didYouCall = false;
+
                     if (state == null) {
                         System.out.println("Can not answer!");
                     } else {

@@ -1,8 +1,8 @@
 package com.state.States;
 
-import org.springframework.stereotype.Component;
-import com.state.State;
 import com.phone.Phone;
+import com.state.State;
+import org.springframework.stereotype.Component;
 
 @Component
 public class TalkingState extends State {
