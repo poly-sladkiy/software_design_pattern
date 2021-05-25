@@ -1,0 +1,7 @@
+# IDEA files
+.idea
+*.iml
+
+# Execution files
+*.class
+*.jar
