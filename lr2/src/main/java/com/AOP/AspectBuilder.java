@@ -12,7 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class AspectBuilder {
 
-    @Before("execution(* com.state.States.WaitingState.answerCall())")
+    @Before("execution(* com.state.States.*.*())")
     public void AspectBefore(JoinPoint jp) {
         System.out.println("LOGGER: " + jp.getSignature());
     }
