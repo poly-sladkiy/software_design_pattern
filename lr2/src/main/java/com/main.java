@@ -38,7 +38,6 @@ public class main {
         float deposit = 0;
         Instant start = Instant.now();
         Instant finish;
-        boolean didYouCall = false;                 //Флажок для реализации логики списания денег
 
         System.out.println(help);
         System.out.println("Phone is turn on!");
@@ -70,29 +69,22 @@ public class main {
 
                 case "call":
                     telephoneNumber = sc.next();
-                    state = phone.call(telephoneNumber);
-                    didYouCall = true;
 
-                    if (state == null) {
+                    if (phone.call(telephoneNumber) == null) {
                         System.out.println("Can not call!");
                     } else {
                         start = Instant.now();
                         System.out.println("Calling on number: " + telephoneNumber);
-//                        System.out.println(state);
                     }
                     break;
 
                 case "answerCall":
-                    state = phone.clickAnswer();
-                    didYouCall = false;
 
-                    if (state == null) {
+                    if (phone.clickAnswer() == null) {
                         System.out.println("Can not answer!");
                     } else {
                         System.out.println("Answer...");
-                        phone.clickAnswer();
                         start = Instant.now();
-//                        System.out.println(state);
                     }
                     break;
 
@@ -106,11 +98,7 @@ public class main {
                         long elapsed = -(Duration.between(finish, start).toMillis()) / 1000;
                         System.out.println("Your phone conversation lasted: " + elapsed + " seconds");
 
-                        if (didYouCall)           //Если звонил ты, то деньги списались
-                            phone.payMoney(elapsed);
-
                         System.out.println("Call is end.");
-//                        System.out.println(state);
                     }
                     break;
 

@@ -32,11 +32,6 @@ public class Phone {
             return false;
     }
 
-    //Сама функция списания денег
-    public void payMoney(long time) {
-        balance -= 0.03f * time;
-    }
-
     public String clickAnswer() {
         return this.state.clickAnswer();
     }
